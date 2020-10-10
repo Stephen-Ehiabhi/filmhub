@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="signin.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Filmhub.com</title>
+</head>
+<body>
+    <nav>   
+        <div class="logo">
+            <h2>Filmhub</h2>
+        </div>
+        <div class="reg">
+            <button class="regi"><a href="/user/register">Register</a></button>     
+        </div>				
+    </nav>
+        <section class="cont">
+            <h3 class="cont-text">Sign In via Email </h3>
+            <form action="/user/login" method="POST">
+                <div class="errors"></div>
+                <input class="email" type="email" name="email" placeholder="Email" required ></input>
+                 <input class="password" type="password" placeholder="password" name="password" required>
+                 <input type="submit" value="sign in" class="submit">
+            </form>
+            
+            <h3 class="h3"><span><a href="register.html">Forgot password? </a></span> Don't have an account? <span><a href="/user/register">Register</a></span></h3> 
+        </section>	
+</body>
+<script src="signin.js"></script>
+<script>
+    const errMessage = document.querySelector('.errors')
+    const form = document.querySelector('form')
+
+
+  form.addEventListener('submit', async (e) => {
+     try {
+        const res = await fetch('/api/user/login', {
+            method: 'POST'
+        });
+         const data = await res.json();
+
+         console.log(data)
+       
+       } catch (e) {
+        console.log(e);
+     }
+  })
+  </script>
+</html>

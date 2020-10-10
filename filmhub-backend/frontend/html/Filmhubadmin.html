@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Filmhubadmin.css">
+    <title>Filmhub-admin-page</title>
+</head>
+<body>
+   <div class="loader">
+   <img class="loader-image" src="giphy.gif">
+</div>
+  <nav>
+    <div class="logo">
+      <h2>Filmhub Creator</h2>
+    </div>
+  </nav>
+  
+  <div class="container">
+      <section class="uploads">
+         <article class="date"></article>
+         <article class="upload-input">
+            <form action="/creator/upload-movie" enctype="multipart/form-data" method="POST" autocomplete="on">
+               <h3>Upload a New Movie</h3>
+               <label>Title</label>
+               <input type="text" class="title" placeholder="Add title" name="title" required>
+               <br>
+               <label>Summary</label>
+               <textarea class="summary" name="summary" placeholder="summary" required></textarea>
+               <br>
+               <label>Genre</label>
+               <input type="text" class="genre" name="genre" placeholder="Add genre" required>
+               <br>
+               <label>Year</label>
+               <input type="text" class="year" name="year" placeholder="Add year" required>
+               <br>
+               <label>Writers</label>
+               <input type="text" name="writers" class="writers" placeholder="Add writer" required>
+               <br>
+               <label>Top Acts</label>
+               <input type="text" class="actors" name="actors" placeholder="Add top acts" required>
+               <br>
+               <label>Length</label>
+               <input type="text" class="length" name="length" placeholder="movie length" required>
+               <br>
+               <label>Thriller</label>
+               <input type="text" class="thriller" name="thriller" placeholder="movie thriller" required>
+               <br>
+               <label for="file">Choose Image</label>
+               <input type="file" class="image" name="image" required>
+               <br>
+               <label for="file">Choose Movie</label>
+               <input type="file" class="movie" name="movie" required>
+               <br>
+               <input type="submit" class="submit" value="Upload">
+            </form>
+         </article>
+          <article class="daily-uploads">
+             <h3>Amount of daily uploads</h3>
+             <div class="daily-up"></div>
+          </article>
+      </section>
+    <section class="statistics">
+     <article class="registered-users">
+        <h3>Registered users</h3>
+        <div class="reg-users"> </div>
+     </article>
+     <article class="currently-logged-in">
+       <h3>Currently Logged in</h3>
+       <div class="cur-logged">
+          <ul></ul>
+       </div>
+         <h4 class="logged-in-figures"></h4>
+     </article>
+     <article class="mostdownloaded">
+      <h3>Most Downloaded</h3>
+      <div class="most-download"></div>
+     </article>
+     <article class="popular-search">
+        <h3>Popular search</h3>
+        <div class="pop-search"></div>
+     </article>
+    </section>
+    <section class="send-email">
+       <form action="/creator/send-email"  method="POST">
+         <h3>Send E-mail</h3>
+         <textarea></textarea>
+         <button>Send</button>
+       </form>
+    </section>
+  </div>
+
+</body>
+<script >
+   window.addEventListener('load',()=>{
+	const loader = document.querySelector('.loader');
+   loader.classList.add('after-load')
+   actionMovieData()
+})
+
+   const logDate = () => {
+   const date = document.querySelector('.date');
+   const  today = new Date();
+   const options = {
+        weekday: "long",
+        month: "short",
+        year: "numeric",
+        day: "numeric"
+   };
+date.innerHTML = today.toLocaleDateString("en-US",options)
+
+}
+logDate();
+</script>
+</html>
