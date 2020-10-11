@@ -76,8 +76,6 @@ if(errors.length > 0){
 try{
 //saving a user to DB
   const savedUser = await user.save();
-  //  console.log(user);
-  res.redirect('/user/login');
 }catch(err){
   res.status(500).json('Upload error: ${err}');
 }
@@ -111,7 +109,7 @@ try {
   res.cookie('jwt', token, { httpOnly: true, maxAge: maxAge * 1000 } )
 
   res.redirect('/')
- 
+
 } catch (err) {
   res.json({
     err

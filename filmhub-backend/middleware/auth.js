@@ -7,8 +7,8 @@ const isLoggedIn  = (req,res,next) => {
   const token = req.cookies.jwt;
   if(!token) {
       res.redirect('/user/login');
-  } 
-  //verify if the token is legit
+  } else{
+        //verify if the token is legit
  jwt.verify(token, process.env.TOKEN_SECRET, ()=>{
    //  if(code){
         next();
@@ -16,6 +16,8 @@ const isLoggedIn  = (req,res,next) => {
    //      res.redirect('/user/login');
    //  }
   })
+  }
+ 
 }
 
 

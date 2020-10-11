@@ -11,6 +11,8 @@ router.use(express.static('../frontend/js'));
 
 //import routes
 //const verify = require("./verifyToken");
+const {isLoggedIn} = require("../middleware/auth");
+
 
 //Home Route
 router.get("/", (req ,res) => {
@@ -37,7 +39,7 @@ router.get("/api/:id", async (req ,res) => {
 
 
 //get a single movie
-router.get("/movie", async (req,res) => {
+router.get("/movie",isLoggedIn,async (req,res) => {
      res.sendFile(path.join(__dirname,'../frontend/html','imgdesc.html'))
 });
      
