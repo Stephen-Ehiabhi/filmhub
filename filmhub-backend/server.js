@@ -40,8 +40,15 @@ const webRoutes = require("./routes/page");
 const authRoute = require("./routes/user");
 const creatorActionsRoute = require("./routes/creatorActions");
 const fileUpload = require("./middleware/file-upload");
-const { isLoggedIn, isNotLoggedIn} = require("./middleware/auth");
+const { isAcreator,isLoggedIn, isNotLoggedIn} = require("./middleware/auth");
 
+
+
+//load the creator page
+app.get("/creatorpage", isAcreator ,(req,res) => {
+   res.sendFile(path.join(__dirname,'../frontend/html','filmhubadmin.html'))
+ });
+ 
 
 //Route Middlewares
 app.use("/user",isNotLoggedIn,authRoute);
