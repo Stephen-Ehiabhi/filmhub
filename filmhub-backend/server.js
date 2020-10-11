@@ -46,4 +46,4 @@ const { isLoggedIn, isNotLoggedIn} = require("./middleware/auth");
 //Route Middlewares
 app.use("/user",isNotLoggedIn,authRoute);
 app.use("/creator",creatorActionsRoute);
-app.use("/",isLoggedIn,webRoutes);
+app.use("/",webRoutes);
