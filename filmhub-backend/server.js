@@ -4,6 +4,7 @@ const dotenv = require("dotenv");
 const mongoose = require('mongoose');
 const cookie = require('cookie-parser');
 const cors = require('cors');
+const path = require('path')
 
 const PORT = process.env.PORT || 3000
 //load config
