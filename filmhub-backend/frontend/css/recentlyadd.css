@@ -233,9 +233,12 @@ h6{
     height:180px;
   
 }
+.searchtools img{
+  width: 30px;
+}
 }
 
-@media screen and (max-height: 607px) {
+@media screen and (min-height: 607px) {
   ul{
     top: 15.2vh;
     height: 530px;
@@ -243,6 +246,9 @@ h6{
  .Cancel{
    top: 110px;
  }
+ .searchtools img{
+  width: 30px;
+}
 }
 
 /* computer view */

@@ -26,11 +26,11 @@ router.get("/login", (req, res) => {
 router.post("/register", async (req, res) => {
  
 //validate the input
-const { firstname,lastname,username,email,password,password2,country } = req.body;
+const {username,email,password,password2 } = req.body;
 let errors = []
 
 //check empty fields
-if( !firstname || !lastname || !username || !email || !password || !country ){
+if( !username || !email || !password  ){
   errors.push({ msg: "Please fill in all fields" })
 }
 
@@ -63,12 +63,8 @@ if(errors.length > 0){
 
 //creating a user
   const user = new User({
-  firstname: req.body.firstname,
-  lastname: req.body.lastname,
   username: req.body.username,
   email: req.body.email,
-  country: req.body.country,
-  gender: req.body.gender,
   password: encryptedPassword,
   password2: req.body.password2,
   role: req.body.role

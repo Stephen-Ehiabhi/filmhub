@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 //to check if a user is logged in
 const isLoggedIn  = (req,res,next) => {
    //check for the token is in the headers
-  const token = req.cookies.jwt;
+  const token = req.cookie.jwt;
   if(!token) {
       res.redirect('/user/login');
   } else{
