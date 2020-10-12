@@ -14,6 +14,7 @@ const getSingleMovie = async () => {
     const title = document.querySelector('.title');
     const length = document.querySelector('.length');
     const genre = document.querySelector('.genre1');
+    const frame = document.querySelector('.frame');
     const description = document.querySelector('.description');
     const director = document.querySelector('.directors');
     const writer = document.querySelector('.writers');
@@ -32,5 +33,6 @@ const getSingleMovie = async () => {
       director.textContent = singleMovieData.writers;
       writer.textContent = singleMovieData.actors;
       downloadbtn.href = singleMovieData.movie;
+      frame.src = singleMovieData.thriller;
            
 }
