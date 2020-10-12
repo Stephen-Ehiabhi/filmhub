@@ -17,7 +17,7 @@ const {isAcreator} = require("../middleware/auth");
 
 //load the creator page
 router.get("/", isAcreator ,(req,res) => {
-  res.sendFile(__dirname + '../frontend/html/filmhubadmin.html')
+  res.sendFile('../frontend/html/filmhubadmin.html')
 });
 
 
