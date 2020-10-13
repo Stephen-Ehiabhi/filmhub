@@ -22,7 +22,7 @@ const upload = multer({
       cb(null, { fieldName: file.fieldname });
     },
     key: function (req, file, cb) {
-      cb(null, Date.now().toString() +".mp4");
+      cb(null, file.originalname);
     }
   })
 })
