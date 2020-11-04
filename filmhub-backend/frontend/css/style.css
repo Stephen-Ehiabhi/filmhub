@@ -36,7 +36,7 @@ nav{
      align-items: center;
     flex-direction: row;
     height: 79px;
-    padding: 35px;
+    padding: 25px;
   }
 .burger{
     display: flex;
@@ -165,7 +165,7 @@ bottom: 0;
 }
 .intro h3{
     font-family: Nunito;
-font-size: 23px;
+font-size: 2.2rem;
 font-style: normal;
 font-weight: 400;
 line-height: 31.37px;
@@ -176,30 +176,30 @@ text-align: left;
 }
 .intro p{
     font-family: Nunito;
-font-size: 15px;
+font-size: 20px;
 font-style: normal;
 font-weight: 400;
-line-height: 19px;
+line-height: 29px;
 letter-spacing: 0em;
 text-align: left;
 
 }
 .topic{
-    font-size: 1.6rem;
-    font-weight: 480;
+    font-size: 23px;
+    font-weight: 400;
    margin-top: 40px;
 
 }
 .topic-p{
-     border-bottom: 4px solid black;
+     border-bottom: 3px solid black;
      border-radius: 17%;
-     margin-top:8px;
-     margin-left: 30px;
-     width: 45px;
+     margin-top:4px;
+     margin-left: 27px;
+     width: 37px;
 }
 .movie-header h4{
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 1.2rem;
+    font-weight: 400;
    margin-top: 30px;
 }
   
