@@ -153,8 +153,8 @@ router.delete("/upload-movie/:id", async (req,res) => {
 //send-email route
 //@desc  /api/admin/sendemail
 router.post("/send-email",isAcreator, (req,res) => {
-  const { subject,text } = req.body
-  sendEmail(subject,text,(err,data)=>{
+  const { mail } = req.body
+  sendEmail(mail,text,(err,data)=>{
     if (err) {
       res.status(500).send(`There was an error ${err}`)
     } else {

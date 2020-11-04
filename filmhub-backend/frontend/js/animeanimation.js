@@ -1,8 +1,8 @@
-window.addEventListener('load',()=>{
-	const loader = document.querySelector('.loader');
-   loader.classList.add('after-load') 
-   animeMovieData()
-})
+// window.addEventListener('load',()=>{
+// 	const loader = document.querySelector('.loader');
+//    loader.classList.add('after-load') 
+//    animeMovieData()
+// })
 
 
 //main container

@@ -20,6 +20,26 @@ router.get("/login", (req, res) => {
   res.sendFile(path.join(__dirname, '../frontend/html', 'signin.html'))
 });
 
+const handleErrors = (err) => {
+   console.log(err.message, err.code)
+   let errors = { email: '', password: ''};
+
+//dupl error code
+if (err.code === 11000) {
+  errors.email = 'Email already registered';
+  return errors;
+}
+
+   //val errors
+   if(err.message.includes('User validation failed')){
+      Object.values(err.errors).forEach(({properties})=>{
+          errors[properties.path] = properties.message;
+      })
+   }
+   
+   return errors;
+
+   }
 
 //registration route
 //@desc url /api/user/register
@@ -27,45 +47,21 @@ router.post("/register", async (req, res) => {
  
 //validate the input
 const {username,email,password,password2 } = req.body;
-let errors = []
-
-//check empty fields
-if( !username || !email || !password  ){
-  errors.push({ msg: "Please fill in all fields" })
-}
-
-//check password is at least 6 digits long
-if(password.length < 6){
-   errors.push({ msg: "Password should be at least 6 characters" });
-}
-if(username.length < 4){
-  errors.push({ msg: "Username should be at least 4 characters" });
-}
-if(!email.includes('@')){
-  errors.push({ msg: "Email is invalid" });
-}
-if(password !== password2){
-  errors.push({ msg: "Passwords aren't the same" });
-}
-if(errors.length > 0){
-  res.send({
-    errors
-  })
-}else{
 
 //check if user already exists
   const emailExist = await User.findOne({ email });
-  if(emailExist) return res.status(404).send("email already exists");
+  //if(emailExist) return res.status(404).send("email already exists");
 
 //hash password
  const salt = await bcrypt.genSalt(12);
- const encryptedPassword = await bcrypt.hash(req.body.password, salt);
+ //const encryptedPassword = await bcrypt.hash(password, salt);
 
 //creating a user
   const user = new User({
+  name: req.body.name,
   username: req.body.username,
   email: req.body.email,
-  password: encryptedPassword,
+  password,
   password2: req.body.password2,
   role: req.body.role
 });
@@ -73,8 +69,8 @@ try{
 //saving a user to DB
   const savedUser = await user.save();
 }catch(err){
-  res.status(500).json('Upload error: ${err}');
-}
+ const errors =  handleErrors(err)
+ res.status(400).json({errors})
 }
 });
 
@@ -90,11 +86,11 @@ const { email,password } = req.body;
 try {
    //check if user exists
   const user = await User.findOne({email});
-  if(!user) return res.status(404).send("Incorrect password or Email");
+  //if(!user) return res.status(404).send("Incorrect password or Email");
 
   //check password correct
   const passwordIsCorrect = await bcrypt.compare(password, user.password);
-  if(!passwordIsCorrect)  return res.status(404).send("Incorrect password or Email");
+  //if(!passwordIsCorrect)  return res.status(404).send("Incorrect password or Email");
 
   const maxAge = 3 * 24 * 60 * 60;
 
@@ -107,9 +103,8 @@ try {
   res.redirect('/')
 
 } catch (err) {
-  res.json({
-    err
-  })
+  const errors =  handleErrors(err)
+  res.status(400).json({errors})
 }
 });
 

@@ -35,7 +35,6 @@ mongoose.connect(process.env.URI, { useNewUrlParser: true, useUnifiedTopology: t
    }
 })
 
-
 //Import Routes
 const webRoutes = require("./routes/page");
 const authRoute = require("./routes/user");
@@ -48,3 +47,4 @@ const {isNotLoggedIn} = require("./middleware/auth");
 app.use("/user",isNotLoggedIn,authRoute);
 app.use("/creator",creatorActionsRoute);
 app.use("/",webRoutes);
+

@@ -79,7 +79,7 @@ router.get("/mostpopular", (req,res) => {
      res.sendFile(path.join(__dirname,'../frontend/html','mostpopular.html'))
 });
   
-router.get("/animesandanimations", (req,res) => {
+router.get("/animeandanimation", (req,res) => {
      res.sendFile(path.join(__dirname,'../frontend/html','animeanimation.html'))
 });
 
