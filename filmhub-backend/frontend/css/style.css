@@ -165,9 +165,9 @@ bottom: 0;
 }
 .intro h3{
     font-family: Nunito;
-font-size: 1.3rem;
+font-size: 1.5rem;
 font-style: normal;
-font-weight: 350;
+font-weight: 390;
 line-height: 31.37px;
 letter-spacing: 0em;
 text-align: left;
@@ -186,7 +186,7 @@ text-align: left;
 }
 .topic{
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 370;
    margin-top: 40px;
 
 }
