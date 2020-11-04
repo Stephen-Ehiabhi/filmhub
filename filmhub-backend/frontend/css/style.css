@@ -165,7 +165,7 @@ bottom: 0;
 }
 .intro h3{
     font-family: Nunito;
-font-size: 1.5rem;
+font-size: 1.6rem;
 font-style: normal;
 font-weight: 390;
 line-height: 31.37px;
@@ -176,7 +176,7 @@ text-align: left;
 }
 .intro p{
     font-family: Nunito;
-font-size: 18px;
+font-size: 16px;
 font-style: normal;
 font-weight: 300;
 line-height: 29px;
@@ -186,7 +186,7 @@ text-align: left;
 }
 .topic{
     font-size: 20px;
-    font-weight: 370;
+    font-weight: 400;
    margin-top: 40px;
 
 }
@@ -199,7 +199,7 @@ text-align: left;
 }
 .movie-header h4{
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 390;
    margin-top: 30px;
 }
   
