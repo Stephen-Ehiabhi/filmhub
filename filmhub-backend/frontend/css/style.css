@@ -35,8 +35,8 @@ nav{
      justify-content: space-between;
      align-items: center;
     flex-direction: row;
-    height: 79px;
-    padding: 25px;
+    height: 77px;
+    padding: 22px;
   }
 .burger{
     display: flex;
@@ -49,7 +49,7 @@ nav{
   
 }
 .nav-icons .search{
-    padding-right: 12px;
+    padding-right: 15px;
   }
 .search-image{
     display: block;
@@ -165,9 +165,9 @@ bottom: 0;
 }
 .intro h3{
     font-family: Nunito;
-font-size: 2rem;
+font-size: 1.3rem;
 font-style: normal;
-font-weight: 400;
+font-weight: 350;
 line-height: 31.37px;
 letter-spacing: 0em;
 text-align: left;
@@ -178,14 +178,14 @@ text-align: left;
     font-family: Nunito;
 font-size: 18px;
 font-style: normal;
-font-weight: 400;
+font-weight: 300;
 line-height: 29px;
 letter-spacing: 0em;
 text-align: left;
 
 }
 .topic{
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 400;
    margin-top: 40px;
 
@@ -198,7 +198,7 @@ text-align: left;
      width: 37px;
 }
 .movie-header h4{
-    font-size: 1.2rem;
+    font-size: 16px;
     font-weight: 400;
    margin-top: 30px;
 }
