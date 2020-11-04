@@ -167,7 +167,7 @@ bottom: 0;
     font-family: Nunito;
 font-size: 1.8rem;
 font-style: normal;
-font-weight: 400;
+font-weight: 390;
 line-height: 31.37px;
 letter-spacing: 0em;
 text-align: left;
@@ -187,15 +187,15 @@ text-align: left;
 .topic{
     font-size: 20px;
     font-weight: 390;
-   margin-top: 40px;
+    margin-top: 40px;
 
 }
 .topic-p{
      border-bottom: 3px solid black;
      border-radius: 17%;
      margin-top:4px;
-     margin-left: 27px;
-     width: 37px;
+     margin-left: 23px;
+     width: 34px;
 }
 .movie-header h4{
     font-size: 16px;
