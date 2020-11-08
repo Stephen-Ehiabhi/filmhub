@@ -86,11 +86,11 @@ const { email,password } = req.body;
 try {
    //check if user exists
   const user = await User.findOne({email});
-  //if(!user) return res.status(404).send("Incorrect password or Email");
+  if(!user) return res.status(404).send("Incorrect password or Email");
 
   //check password correct
   const passwordIsCorrect = await bcrypt.compare(password, user.password);
-  //if(!passwordIsCorrect)  return res.status(404).send("Incorrect password or Email");
+  if(!passwordIsCorrect)  return res.status(404).send("Incorrect password or Email");
 
   const maxAge = 3 * 24 * 60 * 60;
 

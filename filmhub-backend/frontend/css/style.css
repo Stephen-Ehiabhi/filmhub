@@ -36,7 +36,7 @@ nav{
      align-items: center;
     flex-direction: row;
     height: 77px;
-    padding: 22px;
+    padding: 25px;
   }
 .burger{
     display: flex;
@@ -63,6 +63,7 @@ ul {
     height: 100%;
     display: flex;
     flex-direction: column;
+    overflow-y: hidden;
     justify-content: space-around;
     transform: translatex(-100%);
     font-size: 22px;
@@ -95,6 +96,16 @@ ul {
     border: none;
     outline: none;
      border-radius: 50%;
+  }
+  .cancel-nav{
+    font-size: 2rem;
+    position: relative;
+    top: -40px;
+    left:40px;
+    font-weight: 300;
+    outline: none;
+    margin-bottom: -140px;
+    cursor: pointer;
   }
  ul li a{
  color: white;
@@ -165,7 +176,7 @@ bottom: 0;
 }
 .intro h3{
     font-family: Nunito;
-font-size: 1.8rem;
+font-size: 1.9rem;
 font-style: normal;
 font-weight: 390;
 line-height: 31.37px;
@@ -176,10 +187,10 @@ text-align: left;
 }
 .intro p{
     font-family: Nunito;
-font-size: 16px;
+font-size: 18px;
 font-style: normal;
 font-weight: 300;
-line-height: 29px;
+line-height: 32px;
 letter-spacing: 0em;
 text-align: left;
 
@@ -198,8 +209,8 @@ text-align: left;
      width: 34px;
 }
 .movie-header h4{
-    font-size: 16px;
-    font-weight: 390;
+    font-size: 18px;
+    font-weight: 400;
    margin-top: 30px;
 }
   
@@ -224,6 +235,9 @@ text-align: left;
     }
 .container{
     padding: 30px;
+}
+.logo{
+    width: 13rem;
 }
     .burger{
         display: none;
@@ -286,14 +300,14 @@ text-align: left;
 }
 .intro h3{
    font-size: 3rem;
- 
+  margin-top:1rem;
 }
 .intro p{
     font-family: Nunito;
-    font-size: 24px;
+    font-size: 30px;
     font-style: normal;
     font-weight: 400;
-    line-height: 37px;
+    line-height: 67px;
     letter-spacing: 0em;
     text-align: left;
     
@@ -315,7 +329,7 @@ text-align: left;
     font-family: Nunito;
 font-size: 25px;
 font-style: normal;
-font-weight: 400;
+font-weight: 350;
 line-height: 30px;
 letter-spacing: 0em;
 text-align: left;
