@@ -50,18 +50,20 @@ const {username,email,password,password2 } = req.body;
 
 //check if user already exists
   const emailExist = await User.findOne({ email });
-  //if(emailExist) return res.status(404).send("email already exists");
+  if(emailExist) return res.status(404).send("email already exists");
 
 //hash password
- const salt = await bcrypt.genSalt(12);
- //const encryptedPassword = await bcrypt.hash(password, salt);
+const salt = await bcrypt.genSalt(12);
+const encryptedPassword = await bcrypt.hash(password, salt);
 
+
+aq
 //creating a user
   const user = new User({
   name: req.body.name,
-  username: req.body.username,
+  username,
   email: req.body.email,
-  password,
+  password:encryptedPassword,
   password2: req.body.password2,
   role: req.body.role
 });
