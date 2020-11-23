@@ -1,8 +1,8 @@
-window.addEventListener('load',()=>{
-	const loader = document.querySelector('.loader');
-   loader.classList.add('after-load')
-   actionMovieData()
-})
+// window.addEventListener('load',()=>{
+// 	const loader = document.querySelector('.loader');
+//    loader.classList.add('after-load')
+//    actionMovieData()
+// })
 
 //main container
 const moviecontainer = document.querySelector('.movie-desc');

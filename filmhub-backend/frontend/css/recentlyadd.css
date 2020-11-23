@@ -3,13 +3,35 @@
   padding: 0;
   box-sizing: border-box;
  text-decoration: none;
- font-family: open sans;
+ font-family: nunito;
  background-color: #fefffe;
  background: none;
 }
 
 /* mobile view */
-
+.back{
+  border: none;
+  width: 5rem;
+  height: 2.3rem;
+  border-radius: 50px;
+  background-color: #0D21A1;
+  margin: 1.5rem;
+  outline: none;
+}
+.back a{
+   color: #fefffe;
+   font-size: 1.2rem;
+   text-decoration: none;
+   outline: none;
+}
+.back a:hover{
+  color:white;
+}
+.back:hover{
+  background-color:rgb(12, 23, 98) ;
+  color: white;
+  outline: none;
+}
 nav{
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -18,7 +40,7 @@ nav{
    align-items: center;
   flex-direction: row;
   height: 79px;
-  padding: 35px;
+  padding: 25px;
 }
 .burger{
   display: flex;
@@ -37,13 +59,14 @@ nav{
 }
 ul {
   position: absolute;
-  top: 10vh;
+  top:0vh;
   left: 0;
   width: 100%;
   background-color: #0D21A1;
-  height: 700px;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   justify-content: space-around;
   transform: translatex(-100%);
   font-size: 22px;
@@ -51,15 +74,48 @@ ul {
 ul li {
     list-style:none;
     width:100%;
-    background-color: #0D21A1;
+   
     text-align:center;
 }
-ul li a{
+.ul-move{
+  transform: translatex(0%);
+}
+/* ul li a{
 color: white;
 background-color: #0D21A1;
 font-size: 20px;
+} */
+.cancel{
+    display: flex;
+    justify-content: space-around;
+     margin-top: -20px;
+     margin-bottom: 2px;
+     height: auto;
 }
-
+.cancel button{
+  background-color: none;
+  border: none;
+  outline: none;
+ 
+   border-radius: 50%;
+}
+ul li a{
+color: white;
+background-color: none;
+display: flex;
+justify-content: center;
+font-size: 19px;
+}
+.cancel-nav{
+  font-size: 2rem;
+  position: relative;
+  top: -40px;
+  outline: none;
+  left:40px;
+  font-weight: 300;
+  margin-bottom: -140px;
+  cursor: pointer;
+}
 footer{
   height: 120px;
 width: 100%;
@@ -99,6 +155,7 @@ bottom: 0;
   font-size: 2.4rem;
   font-weight: 400;
   margin: 25px;
+  margin-top: 4px;
 }
 .movie-img{
 	width: 150px;
@@ -124,6 +181,14 @@ h6 {
 h6 a{
   color:black;
 }
+.nav-active {
+  transform: translatex(0%);
+   overflow: -moz-hidden-unscrollable;
+}
+.bodymove{
+    overflow: hidden;
+}
+
 
 /* Tablet view */
 @media (min-width: 768px){
@@ -219,6 +284,29 @@ justify-content: space-evenly;
 	grid-template-columns: repeat(5,1fr);
   grid-gap: 2px;
  text-align: center;
+}
+.ul-move{
+  transform: translatex(0%);
+}
+/* ul li a{
+color: white;
+background-color: #0D21A1;
+font-size: 20px;
+} */
+.cancel{
+    display: flex;
+    justify-content: space-around;
+     margin-top: -20px;
+     margin-bottom: 2px;
+     height: auto;
+}
+.cancel button{
+   width: 50px;
+   height: 50px;
+  background-color: #fefffe;
+  border: none;
+  outline: none;
+   border-radius: 50%;
 }
 .movie-img{
 	width: 240px;
