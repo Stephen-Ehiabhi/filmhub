@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "build":"node server.js",
+    "build": "echo hello world",
     "dev": "nodemon server.js"
   },
   "keywords": [],
