@@ -1,60 +1,98 @@
-*,*::before,*::after{
-     margin: 0;
+*{
      padding: 0;
      box-sizing: border-box;
-    text-decoration: none;
-    font-family: nunito;
-    background-color: #fefffe;
-    background: none;
- }
- 
- /* mobile view */
- nav{
-     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+     margin: 0;
+     text-decoration: none;   
+}
+body{
+     background-color:  #26262b;  
      display: flex;
-      color: #fefffe;
-      justify-content: space-between;
-      align-items: center;
-     flex-direction: row;
-     height: 79px;
-     padding: 25px;
- }
- .burger{
-     display: flex;
-     align-items: center;
-    
- }
- .nav-icons{
-     display: flex;
-     align-items: center;
- }
- .nav-icons .search{
-     padding-right: 12px;
- }
- .search-image{
-     display: block;
- }
- ul {
-     position: absolute;
-     top: 10vh;
-     left: 0;
-     width: 100%;
-     background-color: #0D21A1;
-     height: 700px;
-     display: flex;
-     flex-direction: column;
-     justify-content: space-around;
-     transform: translatex(-100%);
+    justify-content: center;
+}
+.btn{
+     height: 50px;
+     width: 5rem;
+     border: none;
+     font-size: 1.2rem;
+     border-radius: 0 40px 40px 0;
+     color: white;
+     margin: -4px 0 1px -4px;
+     outline: none;
+     background-color: grey;
+}
+.search {
+     width: 16rem;
+     height: 20px;
+     background: white;
      font-size: 22px;
+     color:black;
+    border-radius: 40px 0 0 40px;
+     padding: 25px;
+     cursor: pointer;
+     outline: none;
+     border: none;
+     margin-top: 40px;
+  
+}
+
+.loader{
+     position: fixed;
+     z-index: 99;
+     height: 100%;
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: white;
    }
-   ul li {
-       list-style:none;
-       width:100%;
-       background-color: #0D21A1;
-       text-align:center;
+   .loader-image{
+     height: auto;
+     width: 13rem;
+     
    }
-  ul li a{
-  color: white;
-  background-color: #0D21A1;
-  font-size: 20px;
+   .after-load{
+     animation: after 1s forwards;
    }
+   @keyframes after {
+     100%{
+       opacity: 0;
+       visibility: hidden;
+     }
+   }
+.cancel {
+    font-size: 2.7rem;
+    position: absolute;
+    top: 41px;
+    right: 130px;
+    font-weight: 800;
+    cursor: pointer;
+}
+.search-list{
+     margin-top: 30px;
+     text-decoration: none;
+     color:white;
+     font-size:2rem;
+     height: 43rem;
+     background-clip: padding-box;
+     overflow-y:scroll;
+}
+.search-list li{
+     list-style: none;
+}
+
+
+    /*LAPTOP screens*/
+@media (min-width: 1026px) {
+     .search{
+          width: 25rem;
+     }
+     .btn{
+          width: 8rem;
+     }
+     .cancel {
+          top: 41px;
+          right: 670px;
+     
+      }
+}
+   

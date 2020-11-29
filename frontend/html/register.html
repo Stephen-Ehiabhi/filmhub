@@ -1,83 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <link rel="stylesheet" href="/register.css">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="register.css">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Filmhub.com</title>
+  <script data-ad-client="ca-pub-6610484857537871" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 <body>
-    <nav>   
-            <svg class="logo" width="60" height="13" viewBox="0 0 60 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M7.674 12V3.6H13.686V4.416H8.598V7.416H11.934V8.22H8.598V12H7.674ZM14.9631 12V3.6H15.8871V12H14.9631ZM17.7404 12V3.6H18.6644V11.172H23.6684V12H17.7404ZM29.1346 11.4L25.8466 4.668V12H24.9826V3.6H26.2786L29.1466 9.564L32.0026 3.6H33.2986V12H32.4226V4.656L29.1346 11.4Z" fill="black"/>
-                <path d="M35.056 12V3.6H35.98V7.356H40.804V3.6H41.728V12H40.804V8.184H35.98V12H35.056ZM50.4213 8.448C50.4213 9.568 50.1133 10.464 49.4973 11.136C48.8893 11.8 48.0733 12.132 47.0493 12.132C46.0173 12.132 45.1973 11.8 44.5893 11.136C43.9813 10.472 43.6773 9.576 43.6773 8.448V3.6H44.6013V8.448C44.6013 9.304 44.8213 9.992 45.2613 10.512C45.7093 11.032 46.3053 11.292 47.0493 11.292C47.7933 11.292 48.3853 11.032 48.8253 10.512C49.2733 9.992 49.4973 9.304 49.4973 8.448V3.6H50.4213V8.448ZM52.3883 3.6H55.7843C56.5523 3.6 57.1643 3.796 57.6203 4.188C58.0843 4.572 58.3163 5.088 58.3163 5.736C58.3163 6.192 58.1803 6.588 57.9083 6.924C57.6443 7.26 57.2843 7.496 56.8283 7.632C57.3803 7.76 57.8203 8.004 58.1483 8.364C58.4763 8.724 58.6403 9.16 58.6403 9.672C58.6403 10.368 58.3883 10.932 57.8843 11.364C57.3883 11.788 56.7323 12 55.9163 12H52.3883V3.6ZM55.7123 4.392H53.3123V7.272H55.7123C56.2163 7.272 56.6203 7.14 56.9243 6.876C57.2363 6.612 57.3923 6.264 57.3923 5.832C57.3923 5.4 57.2363 5.052 56.9243 4.788C56.6203 4.524 56.2163 4.392 55.7123 4.392ZM55.8203 11.208C56.3883 11.208 56.8443 11.064 57.1883 10.776C57.5323 10.48 57.7043 10.092 57.7043 9.612C57.7043 9.132 57.5323 8.748 57.1883 8.46C56.8523 8.172 56.3963 8.028 55.8203 8.028H53.3123V11.208H55.8203Z" fill="#0D21A1"/>
-                <path d="M1.2 12C0.537258 12 0 11.5335 0 10.9581L0 5.74841H6V10.9581C6 11.5335 5.46274 12 4.8 12H1.2Z" fill="#0D21A1"/>
-                <path d="M3.24697 7.17872C3.11311 7.34343 2.83177 7.34343 2.69791 7.17872L0.488354 4.45995C0.331293 4.26669 0.490473 4 0.762885 4H5.18199C5.4544 4 5.61358 4.26669 5.45652 4.45995L3.24697 7.17872Z" fill="#0D21A1"/>
-                </svg>
-       
-        <!-- <div class="nav-icons">
-            <svg class="search-image" width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M13.34 20.88C9.16405 20.88 5.80005 17.516 5.80005 13.34C5.80005 9.164 9.16405 5.8 13.34 5.8C17.516 5.8 20.88 9.164 20.88 13.34C20.88 17.516 17.516 20.88 13.34 20.88ZM13.34 6.96C9.80205 6.96 6.96005 9.80199 6.96005 13.34C6.96005 16.878 9.80205 19.72 13.34 19.72C16.878 19.72 19.72 16.878 19.72 13.34C19.72 9.80199 16.878 6.96 13.34 6.96Z" fill="black"/>
-                <path d="M18.9556 18.1349L24.164 23.3433L23.3439 24.1634L18.1355 18.955L18.9556 18.1349Z" fill="black"/>
-                </svg>
-                
-                <svg class="burger" width="30" height="50" viewBox="0 0 30 50" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <rect width="30" height="50" fill="url(#pattern0)"/>
-                    <defs>
-                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                    <use xlink:href="#image0" transform="translate(0 0.2) scale(0.02 0.012)"/>
-                    </pattern>
-                    <image id="image0" width="50" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAANElEQVRoge3WwQ0AIAzEsCv77wxLIFoke4I8kwAAqSS7O+KG1R0AAADP2HgAAPiOjQcABjrSpwMHOlg7MAAAAABJRU5ErkJggg=="/>
-                    </defs>
-                    </svg>
-                    
-        </div> -->
-        <div class="nav">
-             <ul class="navlinks">
-                <h6 class="cancel-nav">x</h6>
-            <li><a href="/">Home</a></li>
-            <li><a href="#" >Movies</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Help</a></li>
-          </ul> 
+<nav>
+    <!--NAVIGATION SECTION-->	    
+	       <div class="logo">
+				     <h2>Filmhub</h2>
+         </div>  
+         <div class="reg">
+             <button class="regi"><a href="/user/login">Sign In</a></button>     
         </div>
-                       
-    </nav>
-    
-    <button class="back"><a href="/">Back</button>
-    <div class="cont">
-        <div class="form-cont">
-             <h3 class="cont-text">Create an account</h3>
-             <h3 class="cont-text-2">Already have an account?<span><a href="/user/login"> Sign in</a></span></h3> 
-             <div class="errors"></div>
+</nav>
+<section class="cont">   
+  <h3 class="cont-text">Register</h3>
+	<div class="errors"></div>
+    <form id='form' action="/user/register" method="POST">       
+        <input class="username" type="name" name="name" placeholder="Name" >        	<input class="username" type="username" name="username" placeholder="Username" >
+	      <input class="email" type="email" placeholder="Example@gmail.com" name="email" >
+        <input class="password" type="password" placeholder="Password" name="password" >
+        <input class="confirmpass" type="password" placeholder="Confirm Password" name="password2" >
+				<button class="register">Sign up</button>
+  	</form>
+  <h3 class="hQ"> Already have an account ? <span><a href="/user/login">Login</a></span></h3>
+</section>	
 
-        <form action="/user/register" method="POST">
-            <label for="username">Username</label>
-            <input class="email" type="text" name="username" placeholder="e.g JoeDoe01" name="username">     
-            <label for="email">Email-address</label>
-            <input class="email" type="email" name="email" placeholder="e.g joedoe@example.com" >
-            <label for="password">Password</label>
-            <div class="pass">
-                <div>
-<input class="password" type="password" placeholder="********" name="password">
-                </div>
-                <div>
-<svg class="eye" width="25" height="18" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path  d="M13.8907 0.248953C13.7501 0.0895485 13.5594 0 13.3605 0C13.1616 0 12.9709 0.0895485 12.8302 0.248953L1.11 13.5381C1.03837 13.6165 0.981231 13.7104 0.941924 13.8141C0.902617 13.9178 0.881927 14.0294 0.881062 14.1423C0.880197 14.2552 0.899173 14.3672 0.936884 14.4717C0.974594 14.5762 1.03028 14.6711 1.1007 14.751C1.17112 14.8308 1.25486 14.8939 1.34703 14.9367C1.43921 14.9794 1.53797 15.0009 1.63755 15C1.73714 14.999 1.83555 14.9755 1.92705 14.931C2.01856 14.8864 2.10132 14.8216 2.1705 14.7404L13.89 1.45126C14.0306 1.29181 14.1096 1.07557 14.1096 0.850107C14.1096 0.624641 14.0306 0.408406 13.89 0.248953H13.8907ZM2.331 10.4694L4.251 8.29268C4.19625 8.03131 4.16782 7.76374 4.16625 7.49511C4.16625 5.47227 5.65875 3.83122 7.5 3.83122C7.7145 3.83122 7.923 3.85843 8.12625 3.90094L9.0285 2.87889C8.52328 2.784 8.01211 2.73566 7.5 2.73435C2.58 2.7335 0 6.84124 0 7.49511C0 7.85478 0.79275 9.27221 2.331 10.4686V10.4694ZM12.6713 4.52335L10.7498 6.70009C10.8015 6.95688 10.833 7.22132 10.833 7.49511C10.833 9.51795 9.34125 11.1573 7.5 11.1573C7.287 11.1573 7.08 11.1301 6.87825 11.0884L5.97525 12.1113C6.45675 12.1998 6.96225 12.2559 7.5 12.2559C12.42 12.2559 15 8.14643 15 7.49511C15 7.13459 14.208 5.71801 12.6713 4.52335Z" fill="black"/>
-              </svg>
-                </div>
-        
-          </div>
-           
-                
-            <p class="forgot-password"><a>Forgot password?</a></p>
-            <input class="submit" type="submit" value="Sign Up" class="submit">
-        </form>
-
-      </div> 
-    </div>
-  
 </body>
-<script src="/register.js"></script>
+<script src="register.js"></script>
 </html>

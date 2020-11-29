@@ -6,7 +6,8 @@ const cookie = require('cookie-parser');
 const cors = require('cors');
 const path = require('path')
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 8888
+
 //load config
 dotenv.config({ path: "./config/config.env" });
 
