@@ -26,7 +26,7 @@ app.use(express.static('./frontend/images'));
 app.use(express.static('./frontend/js'));
 
 //connect to db
-mongoose.connect(process.env.URL, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true } ,(err) => {
+mongoose.connect(process.env.URI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true } ,(err) => {
   if (err) {
      console.log(`Server error : ${err}`)
    } else {
