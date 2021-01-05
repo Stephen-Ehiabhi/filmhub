@@ -6,12 +6,15 @@ const cookie = require("cookie-parser");
 const cors = require("cors");
 const path = require("path");
 
-const PORT = process.env.PORT || 8000;
-
 //load config
 dotenv.config({
   path: "./config/config.env",
 });
+
+const PORT = process.env.PORT || 8000;
+const Onproduction = process.env.productionURI
+const onDevelopment = process.env.developmentURI
+
 
 //calling express...
 const app = express();
@@ -32,7 +35,7 @@ app.use(express.static("./frontend/js"));
 
 //connect to db
 mongoose.connect(
-  process.env.URL,
+  Onproduction,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
