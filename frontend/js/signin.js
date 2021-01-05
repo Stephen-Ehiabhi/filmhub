@@ -1,22 +1,50 @@
-const errMessage = document.querySelector('.errors')
-const form = document.getElementById('form')
-const email = document.querySelector('.email')
-const password = document.querySelector('.password')
+//function to make a post request to the backend api
+const fetchRoutes = () => {
+  const form = document.querySelector("form");
 
-form.addEventListener('submit', async (e) => {
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-     const messages = [];
-     if(email.value === "" || email.value === null ){
-         messages.push('Email is required')
-     }
+    const errorMessage = document.querySelector(".errors");
+    const successMessage = document.querySelector(".success");
 
-     if(messages.length > 0){
-         e.preventDefault()
-         errMessage.innerText = messages.join(', ')
-     }
-    // const res = await fetch('/user/login',{method = POST});
-    //  const data = await res.json();
-    // console.log(data)
-   
-  
-})
+    const email = document.querySelector(".email").value;
+    const password = document.querySelector(".password").value;
+
+    const formData = {
+      email,
+      password,
+    };
+
+    try {
+      const fetchedData = await fetch("/user/login", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await fetchedData.json();
+      console.log(data);
+
+      //attaching the responses from the db
+      successMessage.textContent = data.success;
+      errorMessage.textContent = data.error;
+    } catch (error) {
+      console.log(error);
+    }
+  });
+};
+fetchRoutes();
+
+//function to view the password
+const viewPassword = () => {
+  const eye = document.querySelector(".eye");
+  const seePassword = document.querySelector(".password");
+
+  eye.addEventListener("click", () => {
+    seePassword.type = "text";
+  });
+};
+viewPassword();
