@@ -11,10 +11,9 @@ dotenv.config({
   path: "./config/config.env",
 });
 
-const PORT = process.env.PORT || 8000;
-const Onproduction = process.env.productionURI
-const onDevelopment = process.env.developmentURI
-
+const PORT = process.env.PORT || 8888;
+const Onproduction = process.env.productionURI;
+const onDevelopment = process.env.developmentURI;
 
 //calling express...
 const app = express();
@@ -34,7 +33,7 @@ app.use(express.static("./frontend/images"));
 app.use(express.static("./frontend/js"));
 
 //connect to db
-mongoose.connect(
+/*mongoose.connect(
   Onproduction,
   {
     useNewUrlParser: true,
@@ -52,7 +51,11 @@ mongoose.connect(
       });
     }
   }
-);
+);*/
+
+app.listen(PORT, () => {
+  console.log(`Server is up, and connected to filmhub on port ${PORT}`);
+});
 
 //Import Routes
 const webRoutes = require("./routes/page");
