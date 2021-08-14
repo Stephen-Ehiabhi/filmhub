@@ -14,7 +14,7 @@ const movieUpload = require("../middleware/file-upload");
 const { isAcreator } = require("../middleware/auth");
 
 //load the creator page
-router.get("/", isAcreator, (req, res) => {
+router.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../frontend/html", "Filmhubadmin.html"));
 });
 
@@ -83,7 +83,7 @@ router.get("/upload-movie/horror", async (req, res) => {
 //@desc  /creator/uploads
 router.post(
   "/upload-movie",
-  isAcreator,
+
   movieUpload.fields([{ name: "image" }, { name: "movie" }]),
   async (req, res) => {
     const movie = new Movie({
@@ -106,7 +106,7 @@ router.post(
       console.log(movie);
       res.redirect("/creator");
     } catch (error) {
-      res.status(404).json({error: `upload error: ${error}`});
+      res.status(404).json({ error: `upload error: ${error}` });
       console.log(error);
     }
   }
@@ -128,13 +128,13 @@ router.delete("/upload-movie/:id", async (req, res) => {
     const deleteMovie = await Movie.findByIdAndDelete(req.params.id);
     return res.status(200).json({ success: ` ${deleteMovie} is deleted` });
   } catch (error) {
-    return res.status(404).json({error:`Error deleting movie ${error}`});
+    return res.status(404).json({ error: `Error deleting movie ${error}` });
   }
 });
 
 //json-email route
 //@desc  /api/admin/jsonemail
-router.post("/json-email", isAcreator, (req, res) => {
+router.post("/json-email", (req, res) => {
   const { mail } = req.body;
   jsonEmail(mail, text, (err, data) => {
     if (err) {

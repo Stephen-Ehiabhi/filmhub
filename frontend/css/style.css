@@ -42,8 +42,11 @@ nav {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  height: 77px;
+  height: 70px;
   padding: 25px;
+  position: sticky;
+  top: 0;
+  background: #fefffe;
 }
 .burger {
   display: flex;
@@ -75,8 +78,6 @@ ul {
 }
 ul li {
   list-style: none;
-  width: 100%;
-
   text-align: center;
 }
 .ul-move {
@@ -116,6 +117,8 @@ ul li a {
   color: white;
   background-color: none;
   display: flex;
+  font-family: sans-serif;
+
   justify-content: center;
   font-size: 19px;
 }
@@ -237,29 +240,29 @@ footer p {
     padding: 30px;
   }
   .logo {
-    width: 13rem;
+    width: 9rem;
   }
   .burger {
     display: none;
   }
   ul {
-    position: absolute;
-    top: 3vh;
-    right: 0px;
-    width: 689px;
+    width: auto;
     background-color: none;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     transform: translatex(0%);
     background: none;
-    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    /* justify-items: center; */
   }
   ul li {
     list-style: none;
     width: 100%;
     background: none;
-    text-align: center;
+    /* text-align: center; */
+    padding-left: 50px;
   }
   ul li a {
     color: #1b1c1e;
@@ -310,22 +313,23 @@ footer p {
     text-align: left;
   }
   .topic {
-    font-size: 2rem;
-    font-weight: 480;
+    font-size: 2.2rem;
+    font-weight: light;
     margin-top: 40px;
   }
   .topic-p {
-    border-bottom: 4px solid black;
+    border-bottom: 3.5px solid black;
     border-radius: 17%;
-    margin-top: 8px;
+    margin-top: 2px;
     margin-left: 30px;
-    width: 45px;
+    width: 40px;
   }
   .movie-header h4 {
-    font-size: 25px;
+    font-size: 2.1rem;
     font-style: normal;
     font-weight: 350;
     line-height: 30px;
+    margin-top: 4rem;
     letter-spacing: 0em;
     text-align: left;
   }
