@@ -60,11 +60,11 @@ app.listen(PORT, () => {
 //Import Routes
 const webRoutes = require("./routes/page");
 const authRoute = require("./routes/user");
-const creatorActionsRoute = require("./routes/creatorActions");
+const admin = require("./routes/admin");
 const fileUpload = require("./middleware/file-upload");
 const { isNotLoggedIn } = require("./middleware/auth");
 
 //Route Middlewares
 app.use("/user", isNotLoggedIn, authRoute);
-app.use("/creator", creatorActionsRoute);
+app.use("/admin", admin);
 app.use("/", webRoutes);

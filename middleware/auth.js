@@ -36,7 +36,7 @@ const isNotLoggedIn  = (req,res,next) => {
 
 
 //to check user roles
-const isAcreator  =  (req, res, next) => {
+const isAdmin  =  (req, res, next) => {
    //check for the token in the headers
    const token = req.cookies.jwt;
    if(!token) {
@@ -59,4 +59,4 @@ const isAcreator  =  (req, res, next) => {
 
 
 
-module.exports = { isLoggedIn, isAcreator, isNotLoggedIn }
+module.exports = { isLoggedIn, isAdmin, isNotLoggedIn }

@@ -15,6 +15,11 @@
   src: url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@1,200&display=swap");
 }
 
+@font-face {
+  font-family: "Lakki Reddy", cursive;
+  src: url("https://fonts.googleapis.com/css2?family=Lakki+Reddy&display=swap");
+}
+
 body {
   margin: 0;
 }
@@ -181,28 +186,31 @@ footer p {
   width: auto;
 }
 .movie-images img {
-  width: 130px;
-  height: 200px;
+  width: 10rem;
+  height: auto;
   margin-right: 17px;
 }
 .intro h3 {
-  font-size: 1.9rem;
+  font-size: 2.3rem;
   font-style: normal;
+  margin-top: 1.5rem;
   font-weight: 390;
   line-height: 31.37px;
   letter-spacing: 0em;
   text-align: left;
 }
 .intro p {
-  font-size: 18px;
+  font-size: 1.5rem;
   font-style: normal;
   font-weight: 300;
   line-height: 32px;
+  margin-top: 1rem;
   letter-spacing: 0em;
   text-align: left;
 }
 .topic {
   font-size: 20px;
+  font-size: 2.1rem;
   font-weight: 390;
   margin-top: 40px;
 }
@@ -214,7 +222,7 @@ footer p {
   width: 34px;
 }
 .movie-header h4 {
-  font-size: 18px;
+  font-size: 2rem;
   font-weight: 400;
   margin-top: 30px;
 }

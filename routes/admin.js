@@ -11,7 +11,7 @@ router.use(express.static("../frontend/js"));
 //imported routes
 const Movie = require("../mongoose_model/Movie");
 const movieUpload = require("../middleware/file-upload");
-const { isAcreator } = require("../middleware/auth");
+const { isAdmin } = require("../middleware/auth");
 
 //load the creator page
 router.get("/", (req, res) => {

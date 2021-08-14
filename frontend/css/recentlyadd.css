@@ -13,6 +13,12 @@
 @font-face {
   font-family: "Mulish", sans-serif;
   src: url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@1,200&display=swap");
+  
+}
+
+@font-face {
+  font-family: 'Lakki Reddy', cursive;
+  src: url('https://fonts.googleapis.com/css2?family=Lakki+Reddy&display=swap');;
 }
 
 
@@ -161,10 +167,11 @@ footer p {
   text-align: center;
 }
 .intro-text {
-  font-size: 2.4rem;
-  font-weight: 400;
+  font-size: 4rem;
+  font-family: 'Lakki Reddy', cursive;
+  font-weight: 350;
   margin: 25px;
-  margin-top: 4px;
+  letter-spacing: 4px;
 }
 .movie-img {
   width: 150px;
