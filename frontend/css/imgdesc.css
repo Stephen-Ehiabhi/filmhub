@@ -93,12 +93,13 @@ font-size: 20px;
 }
 .content{
   display: flex;
- 
+  width: auto;
 }
 .content2{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: auto;
   height: 14rem;
 }
 .starring{
@@ -333,8 +334,12 @@ bottom: 0;
       display: none;
   }
   .container{
-    padding:20px 500px;
+    width: auto;
   }
+  /* .content, .btns{
+    display: flex;
+    justify-content: center;
+  } */
   .form-cont{
       width: 35rem;
       height:25rem;
@@ -367,7 +372,7 @@ bottom: 0;
     color: #0D21A1;
     font-size: 18px;
   }
-  .cancel {
+  .cancel-nav {
     display: none;
   }
 input{

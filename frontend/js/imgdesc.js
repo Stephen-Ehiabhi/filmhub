@@ -24,14 +24,16 @@ const getSingleMovie = async () => {
       const singleMovie = await fetch(`/api/${id}`);
       const singleMovieData = await singleMovie.json();
       
+      console.log(singleMovieData.success.movie);
+
       movieImage.src = singleMovieData.success.image;
       title.textContent = singleMovieData.success.title ;
       length.textContent = singleMovieData.success.length + ' (' + singleMovieData.success.year + ')';
       genre.textContent = singleMovieData.success.genre;
       description.textContent = singleMovieData.success.summary;
       director.textContent = singleMovieData.success.writers;
-      writer.textContent = singleMovieData.success.actors;
+      // writer.textContent = singleMovieData.success.actors;
       downloadbtn.href = singleMovieData.success.movie;
       frame.src = singleMovieData.success.thriller;
-           
+         
 }

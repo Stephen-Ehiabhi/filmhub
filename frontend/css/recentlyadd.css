@@ -316,7 +316,7 @@ h6 a {
   .recently-added-img {
     /* padding: 10px; */
     display: grid;
-    grid-template-columns: repeat(5, .5fr);
+    grid-template-columns: repeat(4, .5fr);
     grid-gap: 10px;
     text-align: center;
   }
@@ -344,7 +344,7 @@ font-size: 20px;
     border-radius: 50%;
   }
   .movie-images img {
-    width: 200px;
+    width: 150px;
     height: auto;
     margin-right: 40px;
   }
