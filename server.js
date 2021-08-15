@@ -25,14 +25,14 @@ app.use(express.static("./frontend/css"));
 app.use(express.static("./frontend/images"));
 app.use(express.static("./frontend/js"));
 
+
 //connect to db
 mongoose.connect(
   productionURI,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useCreateIndex: true,
-    useMongoClient:true
+    useCreateIndex: true
   },
   (err) => {
     if (err) {
