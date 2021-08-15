@@ -67,8 +67,8 @@ router.get("/recentlyadded", (req, res) => {
 router.get("/horror", (req, res) => {
   res.sendFile(path.join(__dirname, "../frontend/html", "horror.html"));
 });
-router.get("/tv-series", (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontend/html", "tv-series.html"));
+router.get("/tvseries", (req, res) => {
+  res.sendFile(path.join(__dirname, "../frontend/html", "tvseries.html"));
 });
 router.get("/mostpopular", (req, res) => {
   res.sendFile(path.join(__dirname, "../frontend/html", "mostpopular.html"));
