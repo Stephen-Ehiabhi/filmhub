@@ -17,5 +17,6 @@
 
   Cancel.addEventListener("click", () => {
     nav.classList.remove("nav-active");
+    body.classList.toggle("bodymove");
   });
 })();

@@ -49,6 +49,7 @@
 nav {
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
   display: flex;
+  background: white;
   color: #fefffe;
   justify-content: space-between;
   align-items: center;
@@ -71,6 +72,9 @@ nav {
 }
 .search-image {
   display: block;
+}
+svg{
+  color: #0D21A1;
 }
 ul {
   position: absolute;
@@ -245,7 +249,7 @@ h6 a {
   }
   .cont {
     width: 35rem;
-    margin: 80px auto;
+    margin: 80px;
   }
   .form-cont {
     width: 35rem;
@@ -255,6 +259,10 @@ h6 a {
     padding: 40px;
   }
   ul {
+    position: relative;
+    top: 0vh;
+    left: 0;
+    height: auto;
     width: auto;
     background-color: none;
     display: flex;
@@ -274,7 +282,7 @@ h6 a {
     padding-left: 50px;
   }
   ul li a {
-    color: #1b1c1e;
+    color: #0D21A1;
     background: none;
     font-size: 18px;
   }
@@ -302,13 +310,14 @@ h6 a {
   }
   .search-image {
     display: block;
+    color: #0D21A1;
   }
 
   .recently-added-img {
     /* padding: 10px; */
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 2px;
+    grid-template-columns: repeat(5, .5fr);
+    grid-gap: 10px;
     text-align: center;
   }
   .ul-move {
@@ -334,13 +343,16 @@ font-size: 20px;
     outline: none;
     border-radius: 50%;
   }
-  .movie-img {
-    width: 240px;
-    height: 350px;
-    margin-bottom: 6px;
+  .movie-images img {
+    width: 200px;
+    height: auto;
+    margin-right: 40px;
   }
   .intro-text {
     font-size: 3.5rem;
     margin: 50px;
   }
+  .cancel-nav{
+    display: none;
+}
 }

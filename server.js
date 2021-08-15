@@ -8,7 +8,7 @@ const path = require("path");
 
 //load config
 dotenv.config({
-  path: "./config/config.env",
+  path: "./config/.env",
 });
 
 const PORT = process.env.PORT || 8888;
@@ -33,8 +33,8 @@ app.use(express.static("./frontend/images"));
 app.use(express.static("./frontend/js"));
 
 //connect to db
-/*mongoose.connect(
-  Onproduction,
+mongoose.connect(
+  "mongodb+srv://stephen:Monammie01@cluster0.0qj1q.gcp.mongodb.net/filmhub?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -46,16 +46,13 @@ app.use(express.static("./frontend/js"));
     } else {
       app.listen(PORT, () => {
         console.log(
-          `Server is up, and connected to filmhub on port ${process.env.PORT}`
+          `Server is up, and connected to filmhub on port ${PORT}`
         );
       });
     }
   }
-);*/
+);
 
-app.listen(PORT, () => {
-  console.log(`Server is up, and connected to filmhub on port ${PORT}`);
-});
 
 //Import Routes
 const webRoutes = require("./routes/page");

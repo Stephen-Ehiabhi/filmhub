@@ -12,7 +12,7 @@ const main = document.querySelector(".recently-added-img");
 //fetch the movie data stored in the databse
 const animeMovieData = async () => {
   try {
-    const resp = await fetch("/creator/upload-movie/animeanimation");
+    const resp = await fetch("/admin/upload-movie/animeanimation");
     const data = await resp.json();
     console.log(data);
 

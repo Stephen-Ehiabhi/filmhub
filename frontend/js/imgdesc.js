@@ -10,29 +10,28 @@ const getSingleMovie = async () => {
 
     const id = window.location.search.match(/id=(.*)/)[1]
     
-    const movieImage = document.querySelector('.movieimg');
-    const title = document.querySelector('.title');
-    const length = document.querySelector('.length');
-    const genre = document.querySelector('.genre1');
-    const frame = document.querySelector('.frame');
-    const description = document.querySelector('.description');
-    const director = document.querySelector('.directors');
-    const writer = document.querySelector('.writers');
-    const downloadbtn = document.querySelector('.downloadbtn')
+    let movieImage = document.querySelector('.movieimg');
+    let title = document.querySelector('.title');
+    let length = document.querySelector('.length');
+    let genre = document.querySelector('.genre1');
+    let frame = document.querySelector('.frame');
+    let description = document.querySelector('.description');
+    let director = document.querySelector('.directors');
+    let writer = document.querySelector('.writers');
+    let downloadbtn = document.querySelector('.downloadbtn')
     
 
       const singleMovie = await fetch(`/api/${id}`);
       const singleMovieData = await singleMovie.json();
-    //   console.log(singleMovieData);
       
-      movieImage.src = singleMovieData.image;
-      title.textContent = singleMovieData.title ;
-      length.textContent = singleMovieData.length + ' (' + singleMovieData.year + ')';
-      genre.textContent = singleMovieData.genre;
-      description.textContent = singleMovieData.summary;
-      director.textContent = singleMovieData.writers;
-      writer.textContent = singleMovieData.actors;
-      downloadbtn.href = singleMovieData.movie;
-      frame.src = singleMovieData.thriller;
+      movieImage.src = singleMovieData.success.image;
+      title.textContent = singleMovieData.success.title ;
+      length.textContent = singleMovieData.success.length + ' (' + singleMovieData.success.year + ')';
+      genre.textContent = singleMovieData.success.genre;
+      description.textContent = singleMovieData.success.summary;
+      director.textContent = singleMovieData.success.writers;
+      writer.textContent = singleMovieData.success.actors;
+      downloadbtn.href = singleMovieData.success.movie;
+      frame.src = singleMovieData.success.thriller;
            
 }

@@ -122,7 +122,7 @@ ul li {
   cursor: pointer;
 }
 ul li a {
-  color: white;
+  color: #0D21A1;
   background-color: none;
   display: flex;
   font-family: sans-serif;
@@ -257,6 +257,10 @@ footer p {
     display: none;
   }
   ul {
+    position: relative;
+    top: 0vh;
+    left: 0;
+    height: auto;
     width: auto;
     background-color: none;
     display: flex;
@@ -276,7 +280,6 @@ footer p {
     padding-left: 50px;
   }
   ul li a {
-    color: #1b1c1e;
     background: none;
     font-size: 18px;
   }
@@ -343,6 +346,9 @@ footer p {
     margin-top: 4rem;
     letter-spacing: 0em;
     text-align: left;
+  }
+  .cancel-nav{
+      display: none;
   }
   /* .nav-icons{
    position: absolute;

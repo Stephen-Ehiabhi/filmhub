@@ -244,10 +244,11 @@ bottom: 0;
         height:25rem;
     }
  ul {
-    position: absolute;
-    top: 3vh;
-    left: 800px;
-    width: 630px;
+    position: relative;
+    top: 0vh;
+    left: 0;
+    height: auto;
+    width: auto;
     background-color: none;
     display: flex;
     flex-direction: row;

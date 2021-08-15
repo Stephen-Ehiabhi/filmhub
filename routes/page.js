@@ -37,7 +37,7 @@ router.get("/api/:id", async (req, res) => {
 });
 
 //get a single movie
-router.get("/movie", isLoggedIn, async (req, res) => {
+router.get("/movie", async (req, res) => {
   res.sendFile(path.join(__dirname, "../frontend/html", "imgdesc.html"));
 });
 
