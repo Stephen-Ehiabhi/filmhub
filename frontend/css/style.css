@@ -122,11 +122,11 @@ ul li {
   cursor: pointer;
 }
 ul li a {
-  color: #0D21A1;
+  color:#fefffe;
   background-color: none;
   display: flex;
   font-family: sans-serif;
-
+  
   justify-content: center;
   font-size: 19px;
 }
@@ -282,6 +282,7 @@ footer p {
   ul li a {
     background: none;
     font-size: 18px;
+    color: #0d21a1;
   }
   .cancel {
     display: none;

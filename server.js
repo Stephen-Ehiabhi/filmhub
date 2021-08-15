@@ -6,8 +6,6 @@ const cors = require("cors");
 const path = require("path");
 const { PORT, productionURI } = require("./config.js");
 
-// const onDevelopment = process.env.developmentURI;
-
 //calling express...
 const app = express();
 

@@ -14,7 +14,6 @@ const animeMovieData = async () => {
   try {
     const resp = await fetch("/admin/upload-movie/animeanimation");
     const data = await resp.json();
-    console.log(data);
 
     data.forEach((movie) => {
       //create elements
