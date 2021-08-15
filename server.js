@@ -1,19 +1,12 @@
 //Installed Modules
 const express = require("express");
-const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const cookie = require("cookie-parser");
 const cors = require("cors");
 const path = require("path");
+const { PORT, productionURI } = require("./config.js");
 
-//load config
-dotenv.config({
-  path: "./config/.env",
-});
-
-const PORT = process.env.PORT || 8888;
-const Onproduction = process.env.productionURI;
-const onDevelopment = process.env.developmentURI;
+// const onDevelopment = process.env.developmentURI;
 
 //calling express...
 const app = express();
@@ -34,25 +27,23 @@ app.use(express.static("./frontend/js"));
 
 //connect to db
 mongoose.connect(
-  "mongodb+srv://stephen:Monammie01@cluster0.0qj1q.gcp.mongodb.net/filmhub?retryWrites=true&w=majority",
+  productionURI,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
+    useMongoClient:true
   },
   (err) => {
     if (err) {
       console.log(`Server error : ${err}`);
     } else {
       app.listen(PORT, () => {
-        console.log(
-          `Server is up, and connected to filmhub on port ${PORT}`
-        );
+        console.log(`Server is up, and connected to filmhub on port ${PORT}`);
       });
     }
   }
 );
-
 
 //Import Routes
 const webRoutes = require("./routes/page");
