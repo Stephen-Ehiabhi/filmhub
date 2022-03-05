@@ -2,12 +2,6 @@
 Fullstack website to download different kinds of movies from. It involves an admin page where new movies can be added and data about the website can be seen
 to run server 
 
-
-## Appendix
-
-Please note this project is for educational purposes only.
-
-
 ## Badges
 
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
@@ -39,13 +33,12 @@ Install filmhub with npm
     
 ## Authors
 
-- [@steevgr3y](https://www.github.com/stephenehiabhi)
+- [@steevgr3y](https://www.github.com/stephen-ehiabhi)
 
 
 ## Contributing
 
 Contributions are always welcome!
-
 
 
 ## Feedback
