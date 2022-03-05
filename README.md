@@ -1,4 +1,4 @@
-# filmhub
+# FilmHub
 Fullstack website to download different kinds of movies from. It involves an admin page where new movies can be added and data about the website can be seen
 to run server 
 
@@ -23,8 +23,8 @@ to run server
 Install filmhub with npm
 
 ```bash
-  git clone https://github.com/Stephen-Ehiabhi/steevanime_api.git
-  cd steevanime_api
+  git clone https://github.com/Stephen-Ehiabhi/filmhub.git
+  cd filmhub
   npm install
   npm run dev (to run the server)
   
