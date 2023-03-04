@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const cookie = require("cookie-parser");
 const cors = require("cors");
 const path = require("path");
-const { PORT, productionURI } = require("./config.js");
+const { productionURI } = require("./config.js");
 
 //calling express...
 const app = express();
@@ -23,9 +23,8 @@ app.use(express.static("./frontend/css"));
 app.use(express.static("./frontend/images"));
 app.use(express.static("./frontend/js"));
 
-
 //connect to db
-mongoose.connect(
+/*mongoose.connect(
   productionURI,
   {
     useNewUrlParser: true,
@@ -36,12 +35,10 @@ mongoose.connect(
     if (err) {
       console.log(`Server error : ${err}`);
     } else {
-      app.listen(PORT, () => {
-        console.log(`Server is up, and connected to filmhub on port ${PORT}`);
-      });
+    
     }
   }
-);
+);*/
 
 //Import Routes
 const webRoutes = require("./routes/page");
@@ -54,3 +51,9 @@ const { isNotLoggedIn } = require("./middleware/auth");
 app.use("/user", isNotLoggedIn, authRoute);
 app.use("/admin", admin);
 app.use("/", webRoutes);
+
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`Server is up, and connected to filmhub on port ${PORT}`);
+});
